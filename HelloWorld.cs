@@ -115,6 +115,9 @@ namespace CSharpHelloWorld
             int resultado = Sumar(10, 20);
             Console.WriteLine("El resultado de la suma es: " + resultado);
 
+            //llamado de clase
+            var myClass = new MiClase("Juan", 30);
+            Console.WriteLine($"{myClass.Nombre} tiene {myClass.Edad} años.");
         }
 
         static void PrintMessage()
@@ -130,6 +133,24 @@ namespace CSharpHelloWorld
         static int Sumar(int a, int b)
         {
             return a + b;
+        }
+
+        //Clases
+        class MiClase
+        {
+            public string Nombre { get; set; }
+            public int Edad { get; set; }
+
+            public MiClase(string nombre, int edad)
+            {
+                Nombre = nombre;
+                Edad = edad;
+            }
+
+            // public void MostrarInformacion()
+            // {
+            //     Console.WriteLine($"Nombre: {Nombre}, Edad: {Edad}");
+            // }
         }
     }
 }
