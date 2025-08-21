@@ -92,6 +92,44 @@ namespace CSharpHelloWorld
                 Console.WriteLine("Bucle while, myInt es: " + myInt);
                 myInt++;
             }
+
+
+            //Flujos de control y Funciones
+
+            if (myInt == 50 && myBool == true)
+            {
+                Console.WriteLine("myInt es igual a 50");
+            }
+            else if (myInt > 50 || myBool == false)
+            {
+                Console.WriteLine("myInt es mayor que 50");
+            }
+            else
+            {
+                Console.WriteLine("myInt es menor que 50");
+            }
+
+            PrintMessage();
+            FuncionRecogerMensaje("¡Hola desde una función en C#!");
+
+            int resultado = Sumar(10, 20);
+            Console.WriteLine("El resultado de la suma es: " + resultado);
+
+        }
+
+        static void PrintMessage()
+        {
+            Console.WriteLine("My first C# function!");
+        }
+
+        static void FuncionRecogerMensaje(string mensaje)
+        {
+            Console.WriteLine("Mensaje recibido: " + mensaje);
+        }
+
+        static int Sumar(int a, int b)
+        {
+            return a + b;
         }
     }
 }
