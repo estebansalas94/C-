@@ -58,6 +58,40 @@ namespace CSharpHelloWorld
 
             var myTuple = ("PrimerElemento", 42, true);
             Console.WriteLine(myTuple);
+
+
+            //Bucles
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Bucle for, iteración: " + i);
+            }
+
+            foreach (var item in myArray)
+            {
+                Console.WriteLine("Bucle foreach, elemento: " + item);
+            }
+
+            foreach (var kvp in myDictionary)
+            {
+                Console.WriteLine($"Clave: {kvp.Key}, Valor: {kvp.Value}");
+            }
+
+            foreach (var item in mySet)
+            {
+                Console.WriteLine("Bucle foreach en Set, elemento: " + item);
+            }
+
+            foreach (var item in myTuple.GetType().GetFields())
+            {
+                Console.WriteLine("Bucle foreach en Tuple, elemento: " + item.GetValue(myTuple));
+            }
+
+            while (myInt < 50)
+            {
+                Console.WriteLine("Bucle while, myInt es: " + myInt);
+                myInt++;
+            }
         }
     }
 }
